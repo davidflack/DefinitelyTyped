@@ -20,7 +20,7 @@ export type APIGatewayEventRequestContext =
 
 // The requestContext property of both request authorizer and proxy integration events.
 export interface APIGatewayEventRequestContextWithAuthorizer<TAuthorizerContext> {
-    accountId: string;
+    accountId?: string;
     apiId: string;
     // This one is a bit confusing: it is not actually present in authorizer calls
     // and proxy calls without an authorizer. We model this by allowing undefined in the type,
